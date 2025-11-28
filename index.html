@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMCC CCIS Week 2025-Campus Event</title>
+    <link rel="icon" href="mon.png">
+
+    <style>
+        :root {
+            --accent: #1463da;
+            --accent-light:#64b5f6;
+            --muted:#555;
+            --card-bg:#e3f2fd;
+            --max-w:1000px;
+            --radius:12px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        html,body {
+            margin:0;padding:0;
+            background:#f0f8ff;
+            color:#222;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        .container {
+            max-width:var(--max-w);
+            margin: 24px auto;
+            padding: 16px;
+        }
+
+        header.hero {
+            display:grid;
+            grid-template-columns: 1fr 220px;
+            gap: 16px;
+            align-items:center;
+            background:linear-gradient(90deg,rgba(13,71,161,0.15),rgba(13,71,161,0.05));
+            padding:20px;
+            border-radius:var(--radius);
+        }
+        header h1 { margin:0; color:var(--accent);}
+        header p.tagline { margin:0; color:var(--muted);}
+
+        nav {margin:14px 0; display:flex;gap:12px;flex-wrap:wrap;}
+        nav a {
+            text-decoration:none;
+            color:#fff;
+            border-radius:8px;
+            background:var(--accent);
+            transition: background 0.3s;
+        }
+
+        nav a:hover {background:var(--accent-light);}
+
+        .card {
+            background:var(--card-bg);
+            border-radius:12px;
+            padding:16px;
+            margin-bottom:16px;
+            box-shadow:0 6px 18px rgba(10,20,40,0.03);
+        }
+
+        .panel {
+            padding:12px;
+            border-radius:8px;
+            background:#e1f5fe;
+            border:1px solid var(--accent-light);
+            margin-bottom:16px;
+
+        }
+
+        .banner {
+            width:100%; border-radius:8px; display:block; border:2px solid var(--accent);
+        }
+
+        .iframe-wrap {
+            position:relative;
+            width: 100%;
+            padding-bottom:56.25%;
+            height:0;
+            overflow:hidden;
+            border-radius:8px;
+            border:2px solid var(--accent-light);
+        }
+
+        .iframe-wrap iframe {
+            position:absolute;
+            top:0; left:0;
+            width:100%; 
+            border:0;
+
+        }
+
+        footer {
+            margin-top:20px;
+            color:var(--muted);
+            font-size:0.95rem;
+            border-top:2px solid var(--accent);
+            padding-top:12px;
+        }
+
+        pre {
+            background: #bbdefb;
+            color:#0d47a1;
+            padding:12px;
+            border-radius:8px;
+            overflow-x:auto;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo,Monaco, "Roboto Mono","Courier New", monospace;
+        }
+
+        kbd {
+            background:#90caf9;
+            border-radius:4px;padding:px 6px;
+            border:1px solid var(--accent);
+            font-family:inherit;
+        }
+
+        samp {font-style:italic;}
+
+        @media(max-width:900px) { header.hero {grid-template-columns:1fr;}}
+
+        @media(max-width:600px) {nav a {display:block; margin-bottom:8px;}}
+
+
+    </style>
+
+    <script>
+        function toggleFAQ() {
+            var el = document.getElementById('faq');
+            if(!el) return;
+            el.classList.toggle('hidden');
+            var btn = document.getElementById('faq-toggle');
+            if(btn) btn.textContent = el.classList.contains('hidden') ? 'Show FAQ': 'Hide FAQ';
+        }
+        document.addEventListener('DOMContentLoaded',function() {
+
+            var el = document.getElementById('faq');
+            if(el)el.classList.add('hidden');
+        });
+    </script>
+</head>
+<body>
+   <div class="container">
+    <header class="hero card" id="hero">
+        <div>
+            <h1>SMCC CCIS Week 2025</h1>
+            <p class="tagline">Celebrating Innovation Technology -Saint Michael College of Caraga</p>
+            <nav aria-label="Main Navigation">
+                <a href="#overview">Overview</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#location">Location</a>
+                <a href="#techdemo">Tech Demo</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+        <div>
+            <img src="mon.png" alt="SMCC-CCIS Week Banner" class="banner">
+        </div>
+    </header>
+    <main>
+        <section Id="overview" class="card">
+            <h2>Event Overview</h2>
+            <p>SMCC-CCIS Week 2025 bring together students and tech enthusiasts to explore coding,robotics,and digital creativity. Experience hands-on workshops,coding competitions,and exciting exhibits from <strong>March 16-20,2025</strong></p>
+            <h3>What to Expect</h3>
+            <ul>
+                <li>24-hour Coding Challenge 🖥️</li>
+                <li>Workshops on AI, Web Design, and Cybersecurity ⚡</li>
+                <li>Tech Expo featuring students projects & prizes 🏅</li>
+            </ul>
+        </section>
+        <section id="schedule" class="card">
+            <h2>Event Schedule</h2>
+            <div class="card">
+                <h4>Day 1- Opening Ceremony</h4>
+                <p>Welcome & Orientation<br>10:00AM -Keynote:Emerging Trends in Technology</p>
+
+            </div>
+            <div class="card">
+                <h4>Day 2- Skills Workshops</h4>
+                <p>Interactive session: AI tools, Web Development,Cloud Computing Basics</p>
+            </div>
+            <div class="card">
+                <h4>Day 3- Hackathon</h4>
+                <p>Compete in a 24-hour coding marathon🏆 with team prizes</p>
+            </div>
+        </section>
+        <section id="location" class="card">
+            <h2>Event Venue & Map</h2>
+            <div class="iframe-wrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.824706942289!2d125.33782747449858!3d8.988272389626243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e0!3m2!1sen!2sph!4v1764322877232!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+
+                title="SMCC Location">
+                </iframe>
+            </div>
+        </section>
+        <section id="techdemo" class="card">
+            <h2>Tech Demonstration</h2>
+            <pre><code># Download and open the project git clone https://github.com/Chunsik/HTML-Activity-No.2.gitcd HTML-Activity-No.2 start index.html &lt;!-- for Windows --&gt; </code></pre>
+            <p>Use <kbd> Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> in VS code to open the project.</p>
+
+            <p>Example output: <samp> Project loaded: index.html- running at http://localhost:5500</samp></p>
+        </section>
+
+        <section class="card">
+            <h2>Frequently ASked Questions</h2>
+            <button id="faq-toggle" onclick="toggleFAQ()">Show FAQ</button>
+            <div id="faq" class="panel">
+                <ul>
+                    <li>Q:Do I need to pay to join? A:No, participation is free for all students.</li>
+                    <li>Q:How can I join the Hackathon? A:Sign up online with your team.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="card">
+        <div>
+            <img src="mon.png" alt="SMCC CCIS Logo" style="height: 40px;vertical-align:middle;">
+            <span style="margin-left:8px;">SMCC &middot; CCIS</span>
+        </div>
+        <small>Created with ♥ by CCIS student &middot; &copy; 2025 &middot; <span title="email">ccis@smccnasipit.edu.ph</span> </small>
+    </footer>
+   </div> 
+</body>
+</html>
